@@ -1,4 +1,5 @@
 *This project is not actively maintained.*
+*This is a modified version*
 
 NanoVG
 ==========

@@ -599,6 +599,8 @@ float nvgText(NVGcontext* ctx, float x, float y, const char* string, const char*
 // White space is stripped at the beginning of the rows, the text is split at word boundaries or when new-line characters are encountered.
 // Words longer than the max width are slit at nearest character (i.e. no hyphenation).
 void nvgTextBox(NVGcontext* ctx, float x, float y, float breakRowWidth, const char* string, const char* end);
+// include trailing spaces
+void nvgTextBoxWithSpaces(NVGcontext* ctx, float x, float y, float breakRowWidth, const char* string, const char* end);
 
 // Measures the specified text string. Parameter bounds should be a pointer to float[4],
 // if the bounding box of the text should be returned. The bounds value are [xmin,ymin, xmax,ymax]
@@ -610,6 +612,8 @@ float nvgTextBounds(NVGcontext* ctx, float x, float y, const char* string, const
 // if the bounding box of the text should be returned. The bounds value are [xmin,ymin, xmax,ymax]
 // Measured values are returned in local coordinate space.
 void nvgTextBoxBounds(NVGcontext* ctx, float x, float y, float breakRowWidth, const char* string, const char* end, float* bounds);
+// include trailing spaces
+void nvgTextBoxBoundsWithSpaces(NVGcontext* ctx, float x, float y, float breakRowWidth, const char* string, const char* end, float* bounds);
 
 // Calculates the glyph x positions of the specified text. If end is specified only the sub-string will be used.
 // Measured values are returned in local coordinate space.
@@ -623,6 +627,8 @@ void nvgTextMetrics(NVGcontext* ctx, float* ascender, float* descender, float* l
 // White space is stripped at the beginning of the rows, the text is split at word boundaries or when new-line characters are encountered.
 // Words longer than the max width are slit at nearest character (i.e. no hyphenation).
 int nvgTextBreakLines(NVGcontext* ctx, const char* string, const char* end, float breakRowWidth, NVGtextRow* rows, int maxRows);
+// include trailing spaces in rows
+int nvgTextBreakLinesWithSpaces(NVGcontext* ctx, const char* string, const char* end, float breakRowWidth, NVGtextRow* rows, int maxRows);
 
 //
 // Internal Render API
