@@ -29,7 +29,7 @@ class EnhexNanovgConan(ConanFile):
 	exports = "premake5.lua"
 	exports_sources = "src/*"
 	requires = (
-		"freetype/2.12.1"
+		"freetype/2.13.3"
 	)
 
 	def configure(self):
